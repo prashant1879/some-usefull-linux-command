@@ -31,4 +31,5 @@ Step 2 : cd /var/www/html/ (where you need to copy file from server1)
 Step 3 : wget http://your.domain.name/backup.zip  (full path of server1)
 Step 4 : unzip backup.zip ( for unzip folder ) 
 
-
+// for checking free ram in ubuntu
+free -m
