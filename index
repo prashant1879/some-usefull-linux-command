@@ -1,0 +1,34 @@
+*****************************************
+Description : Some command to use ubuntu
+*****************************************
+#Clear cache in ubuntu
+
+echo 1 > /proc/sys/vm/drop_caches
+echo 2 > /proc/sys/vm/drop_caches
+echo 3 > /proc/sys/vm/drop_caches
+
+*****************************************
+// SSH connect 
+ssh -i "/var/www/html/project/0files/project.pem" ubuntu@127.0.0.1
+
+*****************************************
+To Give permission file and folder recursively using SSH
+for folder from /var/www
+find html -type d -exec sudo chmod 0755 {} \;
+
+for file from /var/www
+find html/ -type f -exec sudo chmod 0644 {} \;
+
+*****************************************
+// Give permission to htmlfolder
+chown -R ubuntu:www-data /var/www/html
+
+*****************************************
+Copy file server to server
+
+Step 1 : connect SSH of server2
+Step 2 : cd /var/www/html/ (where you need to copy file from server1)
+Step 3 : wget http://your.domain.name/backup.zip  (full path of server1)
+Step 4 : unzip backup.zip ( for unzip folder ) 
+
+
